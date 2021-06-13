@@ -3,32 +3,8 @@ import React from 'react';
 const Navbar = (props) => {
     return (
         
-            <div className="grid grid-cols-12 flex shadow-md">
-                <div className=" col-1 w-20 ml-8 py-3 px-2 mr-2">
-                    <img src="https://www.codingninjas.com/assets-landing/images/CNLOGO.svg" alt="Coding Ninjas logo"></img>
-                </div>
-                <div className="flex flex-col col-span-7 lg:flex-row hidden lg:inline-flex">
-                    <Navlink link="#">Home</Navlink>
-                    <Navlink link="#">Courses</Navlink>
-                    <Newtag link="#">Practice</Newtag>
-                    <Navlink link="#">Events</Navlink>
-                    <Navlink link="#">Campus Ninjas</Navlink>
-                    <Navlink link="#">Blog</Navlink>
-                    <a href="#" className="text-decoration-none">
-                        <div className="col-span-2 py-4 px-3 hover:bg-gray-100 focus:bg-gray-100">
-                            <img src="https://files.codingninjas.in/cc-desktop-2-5363.svg" alt="Career camp logo" className="w-24"></img>
-                        </div>
-                    </a>
-
-                </div>
-
-                <div className="flex col-start-9 col-end-12 justify-end">
-                    
-                    <Navlink link="#">My Classroom</Navlink>
-                    <div className="py-2 px-2 ml-4">
-                        <button className="login-button text-white py-2 px-6 rounded-full focus:outline-none text-sm">Login</button>
-                    </div>
-                </div>
+            <div className="grid grid-cols-3 lg:grid-cols-12 pl-8 shadow-md">
+                {props.children}
             </div>
         
         )
@@ -37,11 +13,37 @@ const Navbar = (props) => {
 const Navlink = (props) => {
     return (
         <a href={props.link} className="text-decoration-none hover:bg-gray-100 focus:bg-gray-100 ">
-            <div className="text-sm py-4 px-3 text-left">
+            <div className="col-span-1 text-sm pt-4 pb-1 px-3">
                 {props.children}
             </div>
         </a>
         
+    )
+}
+
+const Navimg = (props) => {
+    return (
+        <a href={props.link}>
+            <div className="col-span-2 py-3 px-3">
+                <img src={props.imglink} className={props.size}></img>
+            </div>
+        </a>
+    )
+}
+
+const Rightside = (props) => {
+    return (
+        <div class="flex col-span-2 justify-end">
+            {props.children}
+        </div>
+    )
+}
+
+const Leftside = (props) => {
+    return (
+        <div className="flex col-span-8 flex-row hidden lg:inline-flex">
+            {props.children}
+        </div>
     )
 }
 
@@ -64,4 +66,4 @@ const Newtag = (props) => {
     )
 }
 
-export default Navbar;
+export { Navbar, Navlink, Newtag, Navimg, Leftside, Rightside };
