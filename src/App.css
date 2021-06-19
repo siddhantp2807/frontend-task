@@ -1,16 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 .App {
   text-align: center;
+  font-family: 'Mulish', Helvetica, Arial, sans-serif;
 }
 
-.green {
-  color: green;
+.dropdown {
+  position: absolute;
+  top: 52px;
+  
 }
 
-.black-bold {
-  font-weight: bolder;
-  color: black;
+.alt-dropdown {
+  position: relative;
+  top: 0px;
 }
 
-.login-button {
-        background-image: linear-gradient(62deg, #fbab7e, #f7ce68);
-    }
+.pink-bottom {
+  border-bottom: 3px solid #ff1456;
+}
+
+.bg-violet {
+  background-color: #2f154c;
+}
+
+.bg-brown {
+  background-color: #1c0d04;
+}
+
+.bg-blue {
+  background-color: #032d6b;
+}
+
+.bg-cardsection {
+  background-color: #faf7f2;
+}
+
+
+.sliding-border:after {
+  content: '';
+  display: block;
+  border-bottom: 2px #fa7328 solid;
+  width: 0;
+  
+  transition: 0.25s ease;
+}
+
+.sliding-border:hover:after {
+  width: 100%;
+}
+
+.footer-sliding-border:after {
+  content: '';
+  display: block;
+  border-bottom: 2px #fa7328 solid;
+  width: 0;
+  transition: 0.25s ease;
+}
+
+.footer-sliding-border:hover:after {
+  width: 100%;
+}
+
+.footer-sliding-border:hover {
+  color: #fa7328;
+}
+
+.card-link {
+  color: #fa7328;
+}
+
+.text-orange {
+  color: #fa7328;
+}
+
+.bg-orange {
+  background-color: #fa7328;
+}
